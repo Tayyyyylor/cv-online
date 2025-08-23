@@ -1,0 +1,38 @@
+.hero {
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__subtitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  &__title {
+    font-size: 5rem;
+  }
+
+  &__description {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  &__imgContainer {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &__img {
+    width: 100%;
+  }
+}
