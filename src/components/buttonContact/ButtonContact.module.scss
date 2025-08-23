@@ -1,6 +1,7 @@
 .contactButtons {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 
   &__button {
     display: flex;

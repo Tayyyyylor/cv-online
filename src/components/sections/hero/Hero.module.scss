@@ -1,9 +1,15 @@
 .hero {
   height: 100dvh;
   display: flex;
+  flex-direction: column-reverse;
   justify-content: center;
-  align-items: center;
-  justify-content: space-evenly;
+  padding: 1rem;
+  @media (min-width: 1024px) {
+    padding: 0;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
 
   &__content {
     display: flex;
