@@ -1,11 +1,10 @@
 "use client";
 
-import { useTranslations } from "next-intl";
 import React from "react";
+import { Header } from "../header/Header";
 
 const Homepage = () => {
-  const t = useTranslations("HomePage");
-  return <h1>{t("title")}</h1>;
+  return <Header />;
 };
 
 export default Homepage;

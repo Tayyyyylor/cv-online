@@ -1,5 +1,7 @@
 {
-  "HomePage": {
-    "title": "Hello World!"
+  "Navbar": {
+    "skills": "0. Skills",
+    "projects": "1. Projects",
+    "contact": "2. Contact"
   }
 }

@@ -1,9 +1,9 @@
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
-
-import "./globals.scss";
+import "@/styles/globals.scss";
 import { getMessages, setRequestLocale } from "next-intl/server";
+import { ThemeProvider } from "next-themes";
 
 export default async function LocaleLayout({
   children,
@@ -25,9 +25,16 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body>
-        <NextIntlClientProvider messages={messages}>
-          {children}
-        </NextIntlClientProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <NextIntlClientProvider messages={messages}>
+            {children}
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
