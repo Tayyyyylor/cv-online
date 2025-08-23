@@ -3,5 +3,10 @@
     "skills": "0. Compétences",
     "projects": "1. Projets",
     "contact": "2. Contact"
+  },
+  "Hero": {
+    "subtitle": "Je suis",
+    "title": "Bryan<br></br>Houblon",
+    "description": "Développeur Full Stack"
   }
 }

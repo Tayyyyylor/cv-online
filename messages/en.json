@@ -3,5 +3,10 @@
     "skills": "0. Skills",
     "projects": "1. Projects",
     "contact": "2. Contact"
+  },
+  "Hero": {
+    "subtitle": "I am",
+    "title": "Bryan<br></br>Houblon",
+    "description": "Full Stack Developer"
   }
 }
