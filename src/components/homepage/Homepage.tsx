@@ -4,6 +4,7 @@ import React from "react";
 import { Header } from "../header/Header";
 import { Hero } from "../sections/hero/Hero";
 import { Skills } from "../sections/skills/Skills";
+import { Projects } from "../sections/projects/Projects";
 
 const Homepage = () => {
   return (
@@ -12,6 +13,7 @@ const Homepage = () => {
       <main>
         <Hero />
         <Skills />
+        <Projects />
       </main>
     </>
   );
