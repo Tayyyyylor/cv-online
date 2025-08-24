@@ -1,9 +1,9 @@
 .card {
   width: 100%;
-  max-width: none; /* important pour remplir la colonne */
+  max-width: none;
   border-radius: 14px;
   padding: 16px 18px;
-  background: #f1f5fb; /* ajuste selon ton thème */
+  background: #f1f5fb;
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
   color: $black;
@@ -21,10 +21,10 @@
 
   &__description {
     margin: 0;
-    white-space: normal; /* pas de texte sur une seule ligne */
-    overflow-wrap: anywhere; /* casse les très longs mots/URLs */
-    word-break: break-word; /* fallback Safari/anciens moteurs */
-    hyphens: auto; /* ajoute des césures si possible */
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
   }
 
   &__buttons {
@@ -40,8 +40,15 @@
     opacity: 1;
   }
 
+  &__logo-container {
+    position: relative;
+    width: 96px;
+    height: 40px;
+    flex: 0 0 auto;
+  }
   &__logo {
-    border-radius: 6px;
+    object-fit: contain;
+    object-position: left center;
   }
 
   &__title {
