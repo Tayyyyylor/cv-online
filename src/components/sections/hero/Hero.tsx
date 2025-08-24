@@ -4,6 +4,7 @@ import classNames from "classnames/bind";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { ButtonContact } from "@/components/buttonContact/ButtonContact";
+import SvgAnimated from "@/components/svgAnimated/SvgAnimated";
 
 const cx = classNames.bind(styles);
 
@@ -12,6 +13,7 @@ export const Hero = () => {
 
   return (
     <article className={cx("hero")}>
+      <SvgAnimated />
       <section className={cx("hero__content")}>
         <div>
           <h4 className={cx("hero__subtitle")}>{t("subtitle")}</h4>

@@ -1,0 +1,8 @@
+.svgAnimated {
+  position: absolute;
+  filter: blur(4rem);
+  z-index: -1;
+}
+:global(.dark) .svgAnimated {
+  color: $white;
+}

@@ -80,7 +80,7 @@ export const Skills = () => {
       <h2 className={cx("skills__title")}>Skills</h2>
       <section className={cx("skills__section")}>
         {skills.map((skill, index) => (
-          <div key={index}>
+          <div key={index} className={cx("skills__list-container")}>
             <h4 className={cx("skills__list-title")}>{skill.name}</h4>
             <ul className={cx("skills__list")}>
               {skill.skills.map((skill, index) => (
