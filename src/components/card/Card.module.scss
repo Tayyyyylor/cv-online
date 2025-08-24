@@ -1,0 +1,71 @@
+.card {
+  width: 100%;
+  max-width: none; /* important pour remplir la colonne */
+  border-radius: 14px;
+  padding: 16px 18px;
+  background: #f1f5fb; /* ajuste selon ton thème */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+  color: $black;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  &__description {
+    margin: 0;
+    white-space: normal; /* pas de texte sur une seule ligne */
+    overflow-wrap: anywhere; /* casse les très longs mots/URLs */
+    word-break: break-word; /* fallback Safari/anciens moteurs */
+    hyphens: auto; /* ajoute des césures si possible */
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 0.65rem;
+  }
+  &__button {
+    cursor: pointer;
+    opacity: 0.9;
+    transition: opacity 0.15s;
+  }
+  &__button:hover {
+    opacity: 1;
+  }
+
+  &__logo {
+    border-radius: 6px;
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    line-height: 1.25;
+    font-weight: 700;
+    margin: 0 0 6px;
+  }
+
+  &__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 6px;
+  }
+  &__badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: $black;
+    color: #fff;
+    font-size: 0.78rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    white-space: nowrap;
+  }
+}
