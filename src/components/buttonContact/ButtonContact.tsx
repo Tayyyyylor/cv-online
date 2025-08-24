@@ -5,7 +5,11 @@ import { SiGithub, SiX } from "@icons-pack/react-simple-icons";
 import { Linkedin, Mail } from "lucide-react";
 const cx = classNames.bind(styles);
 
-export const ButtonContact = () => {
+interface ButtonContactProps {
+  className?: string;
+}
+
+export const ButtonContact = ({ className }: ButtonContactProps) => {
   const data = [
     {
       icon: <SiGithub size={15} />,
@@ -29,15 +33,15 @@ export const ButtonContact = () => {
     },
   ];
   return (
-    <section className={cx("contactButtons")}>
+    <section className={cx("buttonsContact", className)}>
       {data.map((item, index) => (
         <a
           key={index}
-          className={cx("contactButtons__button")}
+          className={cx("buttonsContact__button")}
           href={item.link}
         >
           {item.icon}
-          <p className={cx("contactButtons__button__text")}>{item.text}</p>
+          <p className={cx("buttonsContact__button__text")}>{item.text}</p>
         </a>
       ))}
     </section>
