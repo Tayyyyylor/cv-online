@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 export const Contact = () => {
   return (
-    <article className={cx("contact")}>
+    <article className={cx("contact")} id="contact">
       <h2 className={cx("contact__title")}>Contact</h2>
       <p className={cx("contact__description")}>
         Contactez moi par mail ou téléphone

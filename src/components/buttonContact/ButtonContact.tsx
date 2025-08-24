@@ -18,17 +18,17 @@ export const ButtonContact = ({ className }: ButtonContactProps) => {
     },
     {
       icon: <SiX size={15} />,
-      link: "https://x.com/tayyyyylor",
+      link: "https://x.com/_tayylor_g",
       text: "Twitter",
     },
     {
       icon: <Linkedin size={15} />,
-      link: "https://github.com/tayyyyylor",
+      link: "https://www.linkedin.com/in/bryan-houblon-172121211/",
       text: "LinkedIn",
     },
     {
       icon: <Mail size={15} />,
-      link: "https://github.com/tayyyyylor",
+      link: "mailto:bryan.houblon@gmail.com",
       text: "bryan.houblon@gmail.com",
     },
   ];
@@ -39,6 +39,7 @@ export const ButtonContact = ({ className }: ButtonContactProps) => {
           key={index}
           className={cx("buttonsContact__button")}
           href={item.link}
+          target="_blank"
         >
           {item.icon}
           <p className={cx("buttonsContact__button__text")}>{item.text}</p>

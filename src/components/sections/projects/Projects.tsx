@@ -11,7 +11,7 @@ export const Projects = () => {
       title: "Dependant.tv",
       description:
         "Site portfolio pour une boite de production audiovisuelle nommé Dependant",
-      logo: "/meee.png",
+      logo: "/logoDpdBlack.png",
       badges: [
         "Next.js",
         "TypeScript",
@@ -23,29 +23,25 @@ export const Projects = () => {
         "Vercel",
         "Mux",
       ],
-      isWebsite: true,
-      isGithub: true,
-      isNpm: true,
+      linkWebsite: "https://dependant.tv",
+      linkGithub: "https://github.com/Tayyyyylor/dependant.tv",
     },
     {
       title: "Ali Bensaali Production",
       description:
         "Site portfolio pour une boite de production audiovisuelle nommé Ali Bensaali Production",
-      logo: "/meee.png",
-      badges: ["React", "TypeScript", "Sass", "Contentful", "Mux", "Vercel"],
-      isWebsite: true,
-      isGithub: true,
-      isNpm: true,
+      logo: "/ALIBENIRIS.png",
+      badges: ["React", "JavaScript", "Sass", "Contentful", "Mux", "Vercel"],
+      linkWebsite: "https://alibensaali.com/",
+      linkGithub: "https://github.com/Tayyyyylor/Aliv3",
     },
     {
       title: "Labcom Optimaa",
       description:
         "Site portfolio pour une boite de production audiovisuelle nommé Ali Bensaali Productiona",
-      logo: "/meee.png",
+      logo: "/logobleu_optimaa.png",
       badges: ["Next.js", "TypeScript", "Sass", "Strapi", "Vercel", "Nginx"],
-      isWebsite: true,
-      isGithub: true,
-      isNpm: true,
+      linkWebsite: "https://www.labcom-optimaa.com/",
     },
     {
       title: "Cocoa Bio",
@@ -53,9 +49,17 @@ export const Projects = () => {
         "Site portfolio pour une boite de production audiovisuelle nommé Ali Bensaali Production",
       logo: "/meee.png",
       badges: ["Next.js", "TypeScript", "Sass", "Vercel"],
-      isWebsite: true,
-      isGithub: true,
-      isNpm: true,
+      linkWebsite: "https://cocoa-bio.fr",
+      linkGithub: "https://github.com/Tayyyyylor/cocoa-bio",
+    },
+    {
+      title: "Interludes Decors",
+      description:
+        "Interludes Decors est une entreprise de décoration et de décoration de scène",
+      logo: "/logoagathe.png",
+      badges: ["Next.js", "TypeScript", "Sass", "Vercel", "Contentful"],
+      linkWebsite: "https://www.agatheroger.com/",
+      linkGithub: "https://github.com/Tayyyyylor/agathe-website",
     },
     {
       title: "Boilerplate Next.js",
@@ -63,23 +67,12 @@ export const Projects = () => {
         "Site portfolio pour une boite de production audiovisuelle nommé Ali Bensaali Production",
       logo: "/meee.png",
       badges: ["React", "Next.js", "Tailwind", "TypeScript"],
-      isWebsite: true,
-      isGithub: true,
-      isNpm: true,
-    },
-    {
-      title: "Interludes Decors",
-      description:
-        "Interludes Decors est une entreprise de décoration et de décoration de scène",
-      logo: "/meee.png",
-      badges: ["Next.js", "TypeScript", "Sass", "Vercel", "Contentful"],
-      isWebsite: true,
-      isGithub: true,
-      isNpm: true,
+      linkGithub: "https://github.com/Tayyyyylor/boilerplate-front",
+      linkNpm: "https://www.npmjs.com/package/dependant-tv",
     },
   ];
   return (
-    <article className={cx("projects")}>
+    <article className={cx("projects")} id="projects">
       <h2 className={cx("projects__title")}>Projects</h2>
       <section className={cx("projects__grid")}>
         {projects.map((project) => (
@@ -89,9 +82,9 @@ export const Projects = () => {
               title={project.title}
               description={project.description}
               badges={project.badges}
-              isWebsite={project.isWebsite}
-              isGithub={project.isGithub}
-              isNpm={project.isNpm}
+              linkWebsite={project.linkWebsite}
+              linkGithub={project.linkGithub}
+              linkNpm={project.linkNpm}
             />
           </div>
         ))}

@@ -1,31 +1,57 @@
 import {
-  SiJavascript,
+  SiDocker,
+  SiExpo,
+  SiExpress,
+  SiFigma,
+  SiGithub,
+  SiNestjs,
   SiNextdotjs,
+  SiNginx,
   SiNodedotjs,
+  SiPostgresql,
   SiReact,
+  SiSass,
+  SiShadcnui,
+  SiStrapi,
+  SiTailwindcss,
+  SiTypescript,
 } from "@icons-pack/react-simple-icons";
 import React from "react";
 import styles from "./Skills.module.scss";
 import classNames from "classnames/bind";
+import { useTranslations } from "next-intl";
 
 const cx = classNames.bind(styles);
 
 export const Skills = () => {
+  const t = useTranslations("Skills");
+  const gradientSet = new Set([
+    "React Native",
+    "Expo",
+    "Next.js",
+    "Nest.js",
+    "Strapi",
+    "Docker",
+    "AWS",
+    "Tailwind",
+    "Sass",
+  ]);
+
   const skills = [
     {
       name: "Frontend",
       skills: [
         {
-          icon: <SiReact size={15} />,
+          icon: <SiReact size={20} />,
           name: "React.js",
         },
         {
-          icon: <SiNextdotjs size={15} />,
+          icon: <SiNextdotjs size={20} />,
           name: "Next.js",
         },
         {
-          icon: <SiJavascript size={15} />,
-          name: "JavaScript",
+          icon: <SiTypescript size={20} />,
+          name: "TypeScript",
         },
       ],
     },
@@ -33,8 +59,24 @@ export const Skills = () => {
       name: "Backend",
       skills: [
         {
-          icon: <SiNodedotjs size={15} />,
+          icon: <SiNodedotjs size={20} />,
           name: "Node.js",
+        },
+        {
+          icon: <SiNestjs size={20} />,
+          name: "Nest.js",
+        },
+        {
+          icon: <SiExpress size={20} />,
+          name: "Express.js",
+        },
+        {
+          icon: <SiStrapi size={20} />,
+          name: "Strapi",
+        },
+        {
+          icon: <SiPostgresql size={20} />,
+          name: "PostgreSQL",
         },
       ],
     },
@@ -42,17 +84,37 @@ export const Skills = () => {
       name: "Mobile",
       skills: [
         {
-          icon: <SiReact size={15} />,
+          icon: <SiReact size={20} />,
           name: "React Native",
+        },
+        {
+          icon: <SiExpo size={20} />,
+          name: "Expo",
+        },
+        {
+          icon: <SiTailwindcss size={20} />,
+          name: "NativeWind",
         },
       ],
     },
     {
-      name: "Devops",
+      name: t("others"),
       skills: [
         {
-          icon: <SiReact size={15} />,
-          name: "Node.js",
+          icon: <SiDocker size={20} />,
+          name: "Docker",
+        },
+        {
+          icon: <SiGithub size={20} />,
+          name: "Git & Github & CI/CD",
+        },
+        {
+          icon: <SiReact size={20} />,
+          name: "AWS",
+        },
+        {
+          icon: <SiNginx size={20} />,
+          name: "Nginx",
         },
       ],
     },
@@ -60,34 +122,59 @@ export const Skills = () => {
       name: "Design",
       skills: [
         {
-          icon: <SiReact size={15} />,
-          name: "Node.js",
+          icon: <SiTailwindcss size={20} />,
+          name: "Tailwind",
         },
-      ],
-    },
-    {
-      name: "Autres",
-      skills: [
         {
-          icon: <SiReact size={15} />,
-          name: "Node.js",
+          icon: <SiFigma size={20} />,
+          name: "Figma",
+        },
+        {
+          icon: <SiSass size={20} />,
+          name: "Sass",
+        },
+        {
+          icon: <SiShadcnui size={20} />,
+          name: "Shadcn",
         },
       ],
     },
   ];
   return (
-    <article className={cx("skills")}>
-      <h2 className={cx("skills__title")}>Skills</h2>
+    <article className={cx("skills")} id="skills">
+      <svg
+        aria-hidden="true"
+        width="0"
+        height="0"
+        style={{ position: "absolute" }}
+      >
+        <defs>
+          <linearGradient id="skillsGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#ff5f6d" />
+            <stop offset="50%" stopColor="#ff7a59" />
+            <stop offset="100%" stopColor="#ff2d91" />
+          </linearGradient>
+        </defs>
+      </svg>
+      <h2 className={cx("skills__title")}>{t("title")}</h2>
       <section className={cx("skills__section")}>
         {skills.map((skill, index) => (
           <div key={index} className={cx("skills__list-container")}>
             <h4 className={cx("skills__list-title")}>{skill.name}</h4>
             <ul className={cx("skills__list")}>
-              {skill.skills.map((skill, index) => (
-                <li key={index} className={cx("skills__list-item")}>
-                  {skill.icon} {skill.name}
-                </li>
-              ))}
+              {skill.skills.map((s, j) => {
+                const isGradient = gradientSet.has(s.name);
+                return (
+                  <li
+                    key={j}
+                    className={cx("skills__list-item", {
+                      gradient: isGradient,
+                    })}
+                  >
+                    {s.icon} {s.name}
+                  </li>
+                );
+              })}
             </ul>
           </div>
         ))}

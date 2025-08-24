@@ -8,5 +8,12 @@
     "subtitle": "I am",
     "title": "Bryan<br></br>Houblon",
     "description": "Full Stack Developer"
+  },
+  "Skills": {
+    "title": "Skills",
+    "others": "Others"
+  },
+  "Projects": {
+    "title": "Projects"
   }
 }
