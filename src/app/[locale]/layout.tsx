@@ -6,6 +6,7 @@ import { getMessages, setRequestLocale } from "next-intl/server";
 import { ThemeProvider } from "next-themes";
 import { Analytics } from "@vercel/analytics/next"
 import { Metadata } from "next";
+import Script from "next/script";
 
 
 const siteUrl = "https://www.bryanhoublon.com";
@@ -76,6 +77,20 @@ export const metadata: Metadata = {
   },
 };
 
+const personLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Bryan Houblon",
+  alternateName: ["Houblon Bryan"],
+  jobTitle: "Développeur Full-Stack",
+  url: "https://www.bryanhoublon.com",
+  email: "mailto:bryan.houblon@gmail.com",
+  sameAs: [
+    "https://github.com/tayyyyylor",
+    "https://x.com/_Tayylor_G",
+    "https://www.linkedin.com/in/bryan-houblon-172121211/"
+  ]
+};
 export default async function LocaleLayout({
   children,
   params,
@@ -109,6 +124,9 @@ export default async function LocaleLayout({
         >
           <NextIntlClientProvider messages={messages}>
             {children}
+            <Script id="ld-person" type="application/ld+json" strategy="afterInteractive">
+          {JSON.stringify(personLd)}
+        </Script>
             <Analytics />
           </NextIntlClientProvider>
         </ThemeProvider>
