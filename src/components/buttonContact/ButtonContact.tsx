@@ -3,6 +3,7 @@ import styles from "./ButtonContact.module.scss";
 import classNames from "classnames/bind";
 import { SiGithub, SiX } from "@icons-pack/react-simple-icons";
 import { Linkedin, Mail } from "lucide-react";
+import { motion } from "motion/react";
 const cx = classNames.bind(styles);
 
 interface ButtonContactProps {
@@ -35,15 +36,20 @@ export const ButtonContact = ({ className }: ButtonContactProps) => {
   return (
     <section className={cx("buttonsContact", className)}>
       {data.map((item, index) => (
-        <a
+        <motion.a
           key={index}
           className={cx("buttonsContact__button")}
           href={item.link}
           target="_blank"
+          whileHover={{
+            scale: 1.05,
+            transition: { duration: 0.2 },
+          }}
+          whileTap={{ scale: 0.9 }}
         >
           {item.icon}
           <p className={cx("buttonsContact__button__text")}>{item.text}</p>
-        </a>
+        </motion.a>
       ))}
     </section>
   );

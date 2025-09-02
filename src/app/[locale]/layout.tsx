@@ -4,10 +4,9 @@ import { routing } from "@/i18n/routing";
 import "@/styles/globals.scss";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { ThemeProvider } from "next-themes";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
 import { Metadata } from "next";
 import Script from "next/script";
-
 
 const siteUrl = "https://www.bryanhoublon.com";
 const fullName = "Bryan Houblon";
@@ -18,13 +17,12 @@ export const metadata: Metadata = {
     default: `${fullName} — Développeur Full-Stack`,
     template: `%s — ${fullName}`,
   },
-  description:
-    `Portfolio de ${fullName}, développeur Full-Stack (Next.js, TypeScript). Projets, expériences et contact.`,
-    icons: {
-      icon: ["/favicon.ico"],
-      apple: ["/apple-touch-icon.png"],
-      shortcut: ["/apple-touch-icon.png"],
-    },
+  description: `Portfolio de ${fullName}, développeur Full-Stack (Next.js, TypeScript). Projets, expériences et contact.`,
+  icons: {
+    icon: ["/favicon.ico"],
+    apple: ["/apple-touch-icon.png"],
+    shortcut: ["/apple-touch-icon.png"],
+  },
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
@@ -88,8 +86,8 @@ const personLd = {
   sameAs: [
     "https://github.com/tayyyyylor",
     "https://x.com/_Tayylor_G",
-    "https://www.linkedin.com/in/bryan-houblon-172121211/"
-  ]
+    "https://www.linkedin.com/in/bryan-houblon-172121211/",
+  ],
 };
 export default async function LocaleLayout({
   children,
@@ -98,10 +96,7 @@ export default async function LocaleLayout({
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }) {
-
   const { locale } = await params;
-
-
 
   if (!hasLocale(routing.locales, locale)) {
     notFound();
@@ -110,8 +105,6 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   const messages = await getMessages();
-
-
 
   return (
     <html lang={locale} suppressHydrationWarning>
@@ -124,9 +117,13 @@ export default async function LocaleLayout({
         >
           <NextIntlClientProvider messages={messages}>
             {children}
-            <Script id="ld-person" type="application/ld+json" strategy="afterInteractive">
-          {JSON.stringify(personLd)}
-        </Script>
+            <Script
+              id="ld-person"
+              type="application/ld+json"
+              strategy="afterInteractive"
+            >
+              {JSON.stringify(personLd)}
+            </Script>
             <Analytics />
           </NextIntlClientProvider>
         </ThemeProvider>
