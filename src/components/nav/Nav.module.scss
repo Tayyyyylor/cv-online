@@ -6,10 +6,18 @@
   &__link {
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition:
+      color 0.3s ease,
+      background-position 0.3s ease;
+    background-image: linear-gradient(90deg, #00d2ff, #3a7bd5, #1e3c72);
+    background-size: 200% 100%;
+    background-position: 0 0;
+    background-clip: text;
+    -webkit-background-clip: text;
 
     &:hover {
-      color: $red;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
     }
   }
 }

@@ -150,9 +150,9 @@ export const Skills = () => {
       >
         <defs>
           <linearGradient id="skillsGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#ff5f6d" />
-            <stop offset="50%" stopColor="#ff7a59" />
-            <stop offset="100%" stopColor="#ff2d91" />
+            <stop offset="0%" stopColor="#00d2ff" />
+            <stop offset="50%" stopColor="#3a7bd5" />
+            <stop offset="100%" stopColor="#1e3c72" />
           </linearGradient>
         </defs>
       </svg>
