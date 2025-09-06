@@ -1,7 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import styles from "./Card.module.scss";
 import classNames from "classnames/bind";
-import Image from "next/image";
 import { SiGithub, SiNpm } from "@icons-pack/react-simple-icons";
 import { ExternalLink } from "lucide-react";
 
@@ -26,15 +26,16 @@ export const Card = ({
   linkGithub,
   linkWebsite,
 }: CardProps) => {
+  const defaultLogo = "/meee.png";
+
   return (
     <div className={cx("card")}>
       <div className={cx("card__header")}>
         <div className={cx("card__logo-container")}>
-          <Image
-            src={src}
+          <img
+            src={src ?? defaultLogo}
             alt=""
-            className={cx("card__logo")}
-            fill
+            className={cx("card__logo", src ? "" : "card__logo--default")}
             sizes="96px"
           />
         </div>

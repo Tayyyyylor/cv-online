@@ -45,7 +45,6 @@ export const Projects = () => {
     {
       title: "Cocoa Bio",
       description: t("cocoaDesc"),
-      logo: "/meee.png",
       badges: ["Next.js", "TypeScript", "Sass", "Vercel"],
       linkWebsite: "https://cocoa-bio.fr",
       linkGithub: "https://github.com/Tayyyyylor/cocoa-bio",
@@ -61,7 +60,6 @@ export const Projects = () => {
     {
       title: "Boilerplate Next.js",
       description: t("boilerplateDesc"),
-      logo: "/meee.png",
       badges: ["React", "Next.js", "Tailwind", "TypeScript"],
       linkGithub: "https://github.com/Tayyyyylor/boilerplate-front",
       linkNpm: "https://www.npmjs.com/package/dependant-tv",
@@ -74,7 +72,7 @@ export const Projects = () => {
         {projects.map((project) => (
           <div key={project.title} className={cx("projects__card")}>
             <Card
-              src={project.logo}
+              src={project.logo as string}
               title={project.title}
               description={project.description}
               badges={project.badges}

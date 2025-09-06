@@ -13,26 +13,28 @@
     font-weight: 600;
   }
   &__section {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 32px 48px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    width: 100%;
+    padding-left: 40px;
     @media screen and (min-width: 1024px) {
+      display: flex;
+      align-items: flex-start;
       flex-wrap: nowrap;
       gap: 0 48px;
       justify-content: space-between;
       width: 100%;
+      padding-left: 0;
     }
   }
   &__list-container {
-    flex: 0 0 calc(50% - 24px);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    width: 100%;
 
     @media screen and (min-width: 1024px) {
-      flex: 0 0 auto;
-      max-width: none;
       align-items: flex-start;
     }
   }
