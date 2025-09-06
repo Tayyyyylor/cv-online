@@ -29,13 +29,6 @@ a {
   text-decoration: none;
 }
 
-main {
-  padding: 1rem;
-  @media screen and (min-width: 1024px) {
-    padding: 0 10rem;
-  }
-}
-
 .heavitasFont {
   font-family: var(--font-heavitas), "Helvetica", Arial, sans-serif;
 }

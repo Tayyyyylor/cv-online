@@ -1,8 +1,9 @@
 .projects {
   @media screen and (min-width: 1024px) {
+    padding: 0 10rem;
     margin-bottom: 5rem;
   }
-  padding: 50px 0;
+  padding: 50px 1rem;
   &__title {
     text-align: center;
     font-size: 2.5rem;
