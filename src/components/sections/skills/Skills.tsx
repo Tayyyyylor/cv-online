@@ -19,6 +19,7 @@ import {
 import React from "react";
 import styles from "./Skills.module.scss";
 import classNames from "classnames/bind";
+import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
 
 const cx = classNames.bind(styles);
@@ -165,14 +166,18 @@ export const Skills = () => {
               {skill.skills.map((s, j) => {
                 const isGradient = gradientSet.has(s.name);
                 return (
-                  <li
+                  <motion.li
                     key={j}
                     className={cx("skills__list-item", {
                       gradient: isGradient,
                     })}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+                    viewport={{ once: false, amount: 0.4 }}
                   >
                     {s.icon} {s.name}
-                  </li>
+                  </motion.li>
                 );
               })}
             </ul>

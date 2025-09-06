@@ -12,8 +12,8 @@ const Homepage = () => {
   return (
     <>
       <Header />
+      <Hero />
       <main>
-        <Hero />
         <Skills />
         <Projects />
       </main>

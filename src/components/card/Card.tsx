@@ -4,6 +4,7 @@ import styles from "./Card.module.scss";
 import classNames from "classnames/bind";
 import { SiGithub, SiNpm } from "@icons-pack/react-simple-icons";
 import { ExternalLink } from "lucide-react";
+import { motion } from "motion/react";
 
 const cx = classNames.bind(styles);
 
@@ -29,7 +30,13 @@ export const Card = ({
   const defaultLogo = "/meee.png";
 
   return (
-    <div className={cx("card")}>
+    <motion.div
+      className={cx("card")}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+      viewport={{ once: false, amount: 0.4 }}
+    >
       <div className={cx("card__header")}>
         <div className={cx("card__logo-container")}>
           <img
@@ -72,6 +79,6 @@ export const Card = ({
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
