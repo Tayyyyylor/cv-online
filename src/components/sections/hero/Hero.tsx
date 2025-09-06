@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { ButtonContact } from "@/components/buttonContact/ButtonContact";
 import SvgAnimated from "@/components/svgAnimated/SvgAnimated";
+import { motion } from "motion/react";
 
 const cx = classNames.bind(styles);
 
@@ -26,7 +27,11 @@ export const Hero = () => {
           <ButtonContact />
         </div>
       </section>
-      <section className={cx("hero__imgContainer")}>
+      <motion.section
+        className={cx("hero__imgContainer")}
+        whileHover={{ rotate: 360 }}
+        transition={{ duration: 0.7 }}
+      >
         <Image
           className={cx("hero__img")}
           src="/meee.png"
@@ -34,7 +39,7 @@ export const Hero = () => {
           width={200}
           height={200}
         />
-      </section>
+      </motion.section>
     </article>
   );
 };

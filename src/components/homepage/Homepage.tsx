@@ -6,6 +6,7 @@ import { Hero } from "../sections/hero/Hero";
 import { Skills } from "../sections/skills/Skills";
 import { Projects } from "../sections/projects/Projects";
 import { Contact } from "../sections/contact/Contact";
+import { HorizontalHero } from "../sections/horizontalHero/HorizontalHero";
 
 const Homepage = () => {
   return (
@@ -15,8 +16,9 @@ const Homepage = () => {
         <Hero />
         <Skills />
         <Projects />
-        <Contact />
       </main>
+      <HorizontalHero />
+      <Contact />
     </>
   );
 };
