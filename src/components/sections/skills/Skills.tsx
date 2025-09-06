@@ -156,7 +156,7 @@ export const Skills = () => {
           </linearGradient>
         </defs>
       </svg>
-      <h2 className={cx("skills__title")}>{t("title")}</h2>
+      <h2 className={cx("skills__title", "heavitasFont")}>{t("title")}</h2>
       <section className={cx("skills__section")}>
         {skills.map((skill, index) => (
           <div key={index} className={cx("skills__list-container")}>

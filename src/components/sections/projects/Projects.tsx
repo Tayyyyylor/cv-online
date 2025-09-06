@@ -69,7 +69,7 @@ export const Projects = () => {
   ];
   return (
     <article className={cx("projects")} id="projects">
-      <h2 className={cx("projects__title")}>{t("title")}</h2>
+      <h2 className={cx("projects__title", "heavitasFont")}>{t("title")}</h2>
       <section className={cx("projects__grid")}>
         {projects.map((project) => (
           <div key={project.title} className={cx("projects__card")}>

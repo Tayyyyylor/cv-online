@@ -3,9 +3,11 @@
   flex-direction: column;
   gap: 30px;
   align-items: center;
-  margin: 200px 0;
   overflow: hidden;
-
+  margin: 20px 0;
+  @media screen and (min-width: 1024px) {
+    margin: 200px 0;
+  }
   h3 {
     @media screen and (min-width: 1024px) {
       font-size: 45px;

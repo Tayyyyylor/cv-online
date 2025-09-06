@@ -8,7 +8,7 @@ const cx = classNames.bind(styles);
 export const Contact = () => {
   return (
     <footer className={cx("contact")} id="contact">
-      <h2 className={cx("contact__title")}>Contact</h2>
+      <h2 className={cx("contact__title", "heavitasFont")}>Contact</h2>
       <p className={cx("contact__description")}>
         Contactez moi par mail ou téléphone
       </p>
