@@ -2,15 +2,16 @@ import { Card } from "@/components/card/Card";
 import React from "react";
 import styles from "./Projects.module.scss";
 import classNames from "classnames/bind";
+import { useTranslations } from "next-intl";
 
 const cx = classNames.bind(styles);
 
 export const Projects = () => {
+  const t = useTranslations("Projects");
   const projects = [
     {
       title: "Dependant.tv",
-      description:
-        "Site portfolio pour une boite de production audiovisuelle nommé Dependant",
+      description: t("dependantDesc"),
       logo: "/logoDpdBlack.png",
       badges: [
         "Next.js",
@@ -28,8 +29,7 @@ export const Projects = () => {
     },
     {
       title: "Ali Bensaali Production",
-      description:
-        "Site portfolio pour une boite de production audiovisuelle nommé Ali Bensaali Production",
+      description: t("aliDesc"),
       logo: "/ALIBENIRIS.png",
       badges: ["React", "JavaScript", "Sass", "Contentful", "Mux", "Vercel"],
       linkWebsite: "https://alibensaali.com/",
@@ -37,16 +37,14 @@ export const Projects = () => {
     },
     {
       title: "Labcom Optimaa",
-      description:
-        "Site portfolio pour une boite de production audiovisuelle nommé Ali Bensaali Productiona",
+      description: t("labcomDesc"),
       logo: "/logobleu_optimaa.png",
       badges: ["Next.js", "TypeScript", "Sass", "Strapi", "Vercel", "Nginx"],
       linkWebsite: "https://www.labcom-optimaa.com/",
     },
     {
       title: "Cocoa Bio",
-      description:
-        "Site portfolio pour une boite de production audiovisuelle nommé Ali Bensaali Production",
+      description: t("cocoaDesc"),
       logo: "/meee.png",
       badges: ["Next.js", "TypeScript", "Sass", "Vercel"],
       linkWebsite: "https://cocoa-bio.fr",
@@ -54,8 +52,7 @@ export const Projects = () => {
     },
     {
       title: "Interludes Decors",
-      description:
-        "Interludes Decors est une entreprise de décoration et de décoration de scène",
+      description: t("interludesDesc"),
       logo: "/logoagathe.png",
       badges: ["Next.js", "TypeScript", "Sass", "Vercel", "Contentful"],
       linkWebsite: "https://www.agatheroger.com/",
@@ -63,8 +60,7 @@ export const Projects = () => {
     },
     {
       title: "Boilerplate Next.js",
-      description:
-        "Site portfolio pour une boite de production audiovisuelle nommé Ali Bensaali Production",
+      description: t("boilerplateDesc"),
       logo: "/meee.png",
       badges: ["React", "Next.js", "Tailwind", "TypeScript"],
       linkGithub: "https://github.com/Tayyyyylor/boilerplate-front",
@@ -73,7 +69,7 @@ export const Projects = () => {
   ];
   return (
     <article className={cx("projects")} id="projects">
-      <h2 className={cx("projects__title")}>Projects</h2>
+      <h2 className={cx("projects__title")}>{t("title")}</h2>
       <section className={cx("projects__grid")}>
         {projects.map((project) => (
           <div key={project.title} className={cx("projects__card")}>

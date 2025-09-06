@@ -43,7 +43,6 @@ export const Nav = () => {
       href: "/#contact",
     },
   ];
-
   return (
     <>
       {!isMobile ? (

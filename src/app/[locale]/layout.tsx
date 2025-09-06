@@ -7,6 +7,7 @@ import { ThemeProvider } from "next-themes";
 import { Analytics } from "@vercel/analytics/next";
 import { Metadata } from "next";
 import Script from "next/script";
+import { heavitasFont } from "../fonts";
 
 const siteUrl = "https://www.bryanhoublon.com";
 const fullName = "Bryan Houblon";
@@ -107,7 +108,11 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html
+      lang={locale}
+      suppressHydrationWarning
+      className={heavitasFont.variable}
+    >
       <body>
         <ThemeProvider
           attribute="class"

@@ -14,6 +14,16 @@
     "others": "Others"
   },
   "Projects": {
-    "title": "Projects"
+    "title": "Projects",
+    "dependantDesc": "Website for a video production company named Dependant.tv",
+    "aliDesc": "Website for a video production company named Ali Bensaali Production",
+    "labcomDesc": "Website for a scientific project of a communication laboratory (CNRS)",
+    "cocoaDesc": "Website for a scientific project of a composite materials (CNRS)",
+    "interludesDesc": "Website for a company that makes decor for theatre, cinema and live performance",
+    "boilerplateDesc": "Nextjs boilerplate with a clean and scalable architecture including the multilingual and darkmode (Next.js, TypeScript, Tailwind)"
+  },
+  "HorizontalHero": {
+    "text": "Web and Web mobile development - Frontend & Backend",
+    "title": "You want to collaborate ?"
   }
 }
