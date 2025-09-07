@@ -83,7 +83,7 @@ const personLd = {
   alternateName: ["Houblon Bryan"],
   jobTitle: "Développeur Full-Stack",
   url: "https://www.bryanhoublon.com",
-  email: "mailto:bryan.houblon@gmail.com",
+  email: "mailto:bryan.houblon@icloud.com",
   sameAs: [
     "https://github.com/tayyyyylor",
     "https://x.com/_Tayylor_G",

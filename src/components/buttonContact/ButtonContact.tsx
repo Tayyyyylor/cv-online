@@ -29,8 +29,8 @@ export const ButtonContact = ({ className }: ButtonContactProps) => {
     },
     {
       icon: <Mail size={15} />,
-      link: "mailto:bryan.houblon@gmail.com",
-      text: "bryan.houblon@gmail.com",
+      link: "mailto:bryan.houblon@icloud.com",
+      text: "bryan.houblon@icloud.com",
     },
   ];
   return (
