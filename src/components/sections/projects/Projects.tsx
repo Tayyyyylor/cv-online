@@ -60,9 +60,9 @@ export const Projects = () => {
     {
       title: "Boilerplate Next.js",
       description: t("boilerplateDesc"),
-      badges: ["React", "Next.js", "Tailwind", "TypeScript"],
+      badges: ["React", "Next.js", "Sass", "TypeScript"],
       linkGithub: "https://github.com/Tayyyyylor/boilerplate-front",
-      linkNpm: "https://www.npmjs.com/package/dependant-tv",
+      linkNpm: "https://www.npmjs.com/package/fast-boilerplate-next-app",
     },
   ];
   return (
