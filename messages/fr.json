@@ -25,5 +25,8 @@
   "HorizontalHero": {
     "text": "Développement Web et Mobile — Frontend & Backend",
     "title": "Vous voulez collaborer ?"
+  },
+  "Contact": {
+    "desc": "Contactez moi par mail ou via mon linkedin"
   }
 }
