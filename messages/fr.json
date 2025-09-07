@@ -23,7 +23,8 @@
     "boilerplateDesc": "Boilerplate Nextjs avec une architecture clean et scalable incluant le multilingue et le darkmode (Next.js, TypeScript, Tailwind)"
   },
   "HorizontalHero": {
-    "text": "Développement Web et Mobile — Frontend & Backend",
+    "text": "Développement Web et Mobile",
+    "textOpp": "Frontend & Backend",
     "title": "Vous voulez collaborer ?"
   },
   "Contact": {

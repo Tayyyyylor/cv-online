@@ -116,7 +116,7 @@ export default async function LocaleLayout({
       <body>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >

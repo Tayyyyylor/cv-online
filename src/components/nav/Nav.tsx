@@ -85,7 +85,7 @@ export const Nav = () => {
                   onClick={closeMenu}
                   aria-label="Fermer le menu"
                 >
-                <X />
+                  <X />
                 </button>
               </div>
               <div className={cx("navMobile__menu-links")}>

@@ -11,6 +11,7 @@ export const HorizontalHero = () => {
   const t = useTranslations("HorizontalHero");
 
   const TEXT = t("text");
+  const TEXT_OPP = t("textOpp");
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start end", "end start"],
@@ -32,6 +33,19 @@ export const HorizontalHero = () => {
       )),
     [TEXT],
   );
+  const chunksOpp = useMemo(
+    () =>
+      Array.from({ length: 12 }).map((_, i) => (
+        <span
+          className={cx("chunk", "heavitasFont")}
+          aria-hidden="true"
+          key={i}
+        >
+          {TEXT_OPP}
+        </span>
+      )),
+    [TEXT_OPP],
+  );
 
   return (
     <section ref={containerRef} className={cx("horizontalHero")}>
@@ -43,7 +57,7 @@ export const HorizontalHero = () => {
       <h3 className={cx("title", "heavitasFont")}>{t("title")}</h3>
       <div className={cx("trackWrap")}>
         <motion.div className={cx("track")} style={{ x: xOpp }}>
-          {chunks}
+          {chunksOpp}
         </motion.div>
       </div>
     </section>
