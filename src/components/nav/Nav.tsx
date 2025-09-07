@@ -11,6 +11,7 @@ import { useTheme } from "next-themes";
 import useMobile from "@/hooks/useMobile";
 import { LocaleSwitcher } from "../localeSwitcher/LocaleSwitcher";
 import { ThemeToggle } from "../themeToggle/ThemeToggle";
+import { X } from "lucide-react";
 
 const cx = classNames.bind(styles);
 
@@ -84,7 +85,7 @@ export const Nav = () => {
                   onClick={closeMenu}
                   aria-label="Fermer le menu"
                 >
-                  ×
+                <X />
                 </button>
               </div>
               <div className={cx("navMobile__menu-links")}>
