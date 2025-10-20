@@ -45,6 +45,7 @@ export const Projects = () => {
     {
       title: "Cocoa Bio",
       description: t("cocoaDesc"),
+      logo: "/logo_cocoa_black.png",
       badges: ["Next.js", "TypeScript", "Sass", "Vercel"],
       linkWebsite: "https://cocoa-bio.fr",
       linkGithub: "https://github.com/Tayyyyylor/cocoa-bio",
