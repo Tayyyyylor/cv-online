@@ -53,6 +53,19 @@ export const Hero = () => {
           viewport={{ once: false, amount: 0.4 }}
         >
           <ButtonContact />
+          <motion.a
+            href="/CVBryan.pdf"
+            target="_blank"
+            download
+            className={cx("hero__buttonDownload")}
+            whileHover={{
+              scale: 1.05,
+              transition: { duration: 0.2 },
+            }}
+            whileTap={{ scale: 0.9 }}
+          >
+            Télécharger CV PDF
+          </motion.a>
         </motion.div>
       </section>
       <motion.section
