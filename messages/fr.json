@@ -7,7 +7,8 @@
   "Hero": {
     "subtitle": "Je suis",
     "title": "Bryan<br></br>Houblon",
-    "description": "Développeur Full Stack"
+    "description": "Développeur Full Stack",
+    "downloadCta": "Télécharger CV PDF"
   },
   "Skills": {
     "title": "Compétences",
@@ -20,7 +21,10 @@
     "labcomDesc": "Site de présentation d'un projet scientifique de laboratoire de communication (CNRS)",
     "cocoaDesc": "Site de présentation d'un projet scientifique de matériaux composites (CNRS)",
     "interludesDesc": "Site portfolio pour une entreprise de fabrication de décors pour le théatre, cinéma et spectacle vivant",
-    "boilerplateDesc": "Boilerplate Nextjs avec une architecture clean et scalable incluant le multilingue et le darkmode (Next.js, TypeScript, Tailwind)"
+    "boilerplateDesc": "Boilerplate Nextjs avec une architecture clean et scalable incluant le multilingue et le darkmode (Next.js, TypeScript, Tailwind)",
+    "hbstudioDesc": "Site de présentation d'une entreprise de production de site web et application mobile nommée HbStudio",
+    "easinvoiceDesc": "Site de facturation simplifiée en ligne, création de devis et factures simples, suivi des commandes",
+    "templatesSaasDesc": "Template pour SaaS avec Next.js, Tailwind, TypeScript, Supabase, Authentification, Stripe et paiements intégrés avec documentation complète et claire"
   },
   "HorizontalHero": {
     "text": "Développement Web et Mobile",

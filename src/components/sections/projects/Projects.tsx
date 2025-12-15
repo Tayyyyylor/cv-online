@@ -65,6 +65,26 @@ export const Projects = () => {
       linkGithub: "https://github.com/Tayyyyylor/boilerplate-front",
       linkNpm: "https://www.npmjs.com/package/fast-boilerplate-next-app",
     },
+    {
+      title: "HbStudio",
+      description: t("hbstudioDesc"),
+      badges: ["React", "Next.js", "Sass", "TypeScript", "Motion"],
+      linkWebsite: "https://www.hashbstudio.com",
+    },
+    {
+      title: "EasInvoice",
+      description: t("easinvoiceDesc"),
+      badges: ["React", "Next.js", "Sass", "TypeScript", "Supabase"],
+      linkWebsite: "https://www.easinvoice.fr",
+      linkGithub: "https://github.com/Tayyyyylor/easinvoiceV2",
+    },
+    {
+      title: "Templates Saas",
+      description: t("templatesSaasDesc"),
+      badges: ["React", "Next.js", "Sass", "TypeScript"],
+      linkWebsite:
+        "https://taylor000.gumroad.com/l/bnysx?_gl=1*1fgydwf*_ga*MzQxODU5NzY3LjE3NjIyNDA2ODU.*_ga_6LJN6D94N6*czE3NjQ4NDAxMzMkbzE1JGcwJHQxNzY0ODQwMTMzJGo2MCRsMCRoMA..",
+    },
   ];
   return (
     <article className={cx("projects")} id="projects">

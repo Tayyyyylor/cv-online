@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Hero.module.scss";
 import classNames from "classnames/bind";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import { ButtonContact } from "@/components/buttonContact/ButtonContact";
 import SvgAnimated from "@/components/svgAnimated/SvgAnimated";
@@ -11,6 +11,7 @@ const cx = classNames.bind(styles);
 
 export const Hero = () => {
   const t = useTranslations("Hero");
+  const currentLocale = useLocale();
 
   return (
     <article className={cx("hero")}>
@@ -54,7 +55,11 @@ export const Hero = () => {
         >
           <ButtonContact />
           <motion.a
-            href="/CVBryan.pdf"
+            href={
+              currentLocale === "fr"
+                ? "/French_CV_Bryan_HOUBLON.pdf"
+                : "/English_CV_Bryan_HOUBLON.pdf"
+            }
             target="_blank"
             download
             className={cx("hero__buttonDownload")}
@@ -64,7 +69,7 @@ export const Hero = () => {
             }}
             whileTap={{ scale: 0.9 }}
           >
-            Télécharger CV PDF
+            {t("downloadCta")}
           </motion.a>
         </motion.div>
       </section>
@@ -77,7 +82,7 @@ export const Hero = () => {
       >
         <Image
           className={cx("hero__img")}
-          src="/meee.png"
+          src="/me.png"
           alt="Moi"
           width={200}
           height={200}
