@@ -11,6 +11,8 @@
   flex-direction: column;
   gap: 10px;
   min-width: 0;
+  height: 300px;
+  justify-content: space-between;
 
   &__header {
     display: flex;
@@ -83,5 +85,17 @@
     border-radius: 5px;
     width: 40px;
     height: 40px;
+  }
+
+  &__viewmore {
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: 1px solid grey;
+    width: fit-content;
+    border-radius: 5px;
+    background: transparent;
+    color: black;
+    width: 100%;
   }
 }

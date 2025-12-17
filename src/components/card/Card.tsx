@@ -16,6 +16,7 @@ interface CardProps {
   linkNpm?: string;
   linkGithub?: string;
   linkWebsite?: string;
+  onViewMore: () => void;
 }
 
 export const Card = ({
@@ -26,6 +27,7 @@ export const Card = ({
   linkNpm,
   linkGithub,
   linkWebsite,
+  onViewMore,
 }: CardProps) => {
   const defaultLogo = "/meee.png";
 
@@ -79,6 +81,9 @@ export const Card = ({
           </div>
         ))}
       </div>
+      <button onClick={onViewMore} className={cx("card__viewmore")}>
+        Voir plus
+      </button>
     </motion.div>
   );
 };

@@ -1,0 +1,65 @@
+.buttonProject {
+  position: relative;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  border-radius: 5px;
+
+  &__label {
+    position: relative;
+    z-index: 2;
+    display: block;
+    transition: transform 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  // Bordures animées
+  &__border {
+    position: absolute;
+    // background: linear-gradient(
+    //   135deg,
+    //   var(--color-primary, #0066cc),
+    //   var(--color-secondary, #00ccff)
+    // );
+    border: 2px solid;
+    z-index: 1;
+
+    &--top {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      transform-origin: left;
+    }
+
+    &--right {
+      top: 0;
+      right: 0;
+      width: 3px;
+      height: 100%;
+      transform-origin: top;
+    }
+
+    &--bottom {
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 3px;
+      transform-origin: right;
+    }
+
+    &--left {
+      bottom: 0;
+      left: 0;
+      width: 3px;
+      height: 100%;
+      transform-origin: bottom;
+    }
+  }
+}
