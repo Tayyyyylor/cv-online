@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import styles from "./Projects.module.scss";
 import classNames from "classnames/bind";
 import { useTranslations } from "next-intl";
-import { ButtonProject } from "@/components/butttonProject/ButtonProject";
+import { ButtonProject } from "@/components/atoms/butttonProject/ButtonProject";
 import { ProjectModal } from "@/components/projectModal/ProjectModal";
 
 type Category = "client" | "freelance" | "experimental";
@@ -142,7 +142,7 @@ export const Projects = () => {
       </section>
 
       <ProjectModal
-        project={selectedProject}
+        project={selectedProject as Project}
         onClose={() => setSelectedProject(null)}
       />
     </article>

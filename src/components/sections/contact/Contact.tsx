@@ -1,4 +1,4 @@
-import { ButtonContact } from "@/components/buttonContact/ButtonContact";
+import { ButtonContact } from "@/components/atoms/buttonContact/ButtonContact";
 import React from "react";
 import styles from "./Contact.module.scss";
 import classNames from "classnames/bind";

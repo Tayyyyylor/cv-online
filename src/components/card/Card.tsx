@@ -5,6 +5,7 @@ import classNames from "classnames/bind";
 import { SiGithub, SiNpm } from "@icons-pack/react-simple-icons";
 import { ExternalLink } from "lucide-react";
 import { motion } from "motion/react";
+import { Badge } from "../atoms/badges/Badge";
 
 const cx = classNames.bind(styles);
 
@@ -76,9 +77,7 @@ export const Card = ({
       </div>
       <div className={cx("card__badges")}>
         {badges.map((badge) => (
-          <div className={cx("card__badge")} key={badge}>
-            {badge}
-          </div>
+         <Badge key={badge} badge={badge}/>
         ))}
       </div>
       <button onClick={onViewMore} className={cx("card__viewmore")}>

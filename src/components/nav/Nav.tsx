@@ -9,8 +9,8 @@ import { useTranslations } from "next-intl";
 import classNames from "classnames/bind";
 import { useTheme } from "next-themes";
 import useMobile from "@/hooks/useMobile";
-import { LocaleSwitcher } from "../localeSwitcher/LocaleSwitcher";
-import { ThemeToggle } from "../themeToggle/ThemeToggle";
+import { LocaleSwitcher } from "../atoms/localeSwitcher/LocaleSwitcher";
+import { ThemeToggle } from "../atoms/themeToggle/ThemeToggle";
 import { X } from "lucide-react";
 
 const cx = classNames.bind(styles);

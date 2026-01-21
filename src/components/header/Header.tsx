@@ -3,7 +3,7 @@ import styles from "./Header.module.scss";
 import classNames from "classnames/bind";
 import { Nav } from "../nav/Nav";
 import useMobile from "@/hooks/useMobile";
-import { ThemeToggle } from "../themeToggle/ThemeToggle";
+import { ThemeToggle } from "../atoms/themeToggle/ThemeToggle";
 
 const cx = classNames.bind(styles);
 
