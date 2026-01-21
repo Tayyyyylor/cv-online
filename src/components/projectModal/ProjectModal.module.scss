@@ -1,0 +1,214 @@
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+  animation: fadeIn 0.3s ease;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+}
+
+.modalContent {
+ background: #f1f5fb;
+  border-radius: 16px;
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease;
+  position: relative;
+
+
+  @media (max-width: 768px) {
+    max-height: 85vh;
+    border-radius: 12px;
+  }
+}
+
+.modalHeader {
+  padding: 2rem 2rem 1rem;
+  border-bottom: 1px solid #000;
+  position: sticky;
+  top: 0;
+ background: #f1f5fb;
+  z-index: 10;
+  border-radius: 16px 16px 0 0;
+
+
+  @media (max-width: 768px) {
+    padding: 1.5rem 1.5rem 1rem;
+  }
+}
+
+.closeButton {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: black;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+
+}
+
+.modalTitle {
+  font-size: 2rem;
+  margin: 0;
+  color: black;
+  font-weight: 600;
+
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    padding-right: 2rem;
+  }
+}
+
+.modalBody {
+  padding: 2rem;
+
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+  }
+}
+
+.section {
+  margin-bottom: 2.5rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+  color: #000;
+
+}
+
+.sectionText {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #000;
+  margin: 0;
+
+
+}
+
+.featuresList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.featureItem {
+  padding: 0.75rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: 1rem;
+  color: #000;
+  line-height: 1.6;
+
+  &::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #000;
+    font-weight: bold;
+  }
+
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.modalLinks {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem 2rem;
+  border-top: 1px solid #e5e5e5;
+  background-color: #fafafa;
+  border-radius: 0 0 16px 16px;
+
+  @media (max-width: 768px) {
+    padding: 1rem 1.5rem;
+    flex-direction: column;
+  }
+}
+
+.link {
+  flex: 1;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  text-align: center;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+
+  &--primary {
+    background-color: #000;
+    color: #000;
+
+    &:hover {
+      background-color: #333;
+      transform: translateY(-2px);
+    }
+
+  }
+
+  &--secondary {
+    background-color: #e5e5e5;
+    color: #000;
+
+    &:hover {
+      background-color: #d0d0d0;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,11 @@
+.badge {
+        display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: $black;
+    color: #fff;
+    font-size: 0.78rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    white-space: nowrap;
+}

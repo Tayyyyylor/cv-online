@@ -11,6 +11,8 @@
   flex-direction: column;
   gap: 10px;
   min-width: 0;
+  height: fit-content;
+  justify-content: space-between;
 
   &__header {
     display: flex;
@@ -64,17 +66,6 @@
     gap: 8px;
     margin-top: 6px;
   }
-  &__badge {
-    display: inline-flex;
-    align-items: center;
-    padding: 6px 10px;
-    border-radius: 999px;
-    background: $black;
-    color: #fff;
-    font-size: 0.78rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    white-space: nowrap;
-  }
   &__logo {
     width: 96px;
     height: 40px;
@@ -83,5 +74,18 @@
     border-radius: 5px;
     width: 40px;
     height: 40px;
+  }
+
+  &__viewmore {
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: 1px solid grey;
+    width: fit-content;
+    border-radius: 5px;
+    background: transparent;
+    color: black;
+    width: 100%;
+    box-shadow: 1px 1px 1px grey;
   }
 }

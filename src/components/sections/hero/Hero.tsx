@@ -3,8 +3,8 @@ import styles from "./Hero.module.scss";
 import classNames from "classnames/bind";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
-import { ButtonContact } from "@/components/buttonContact/ButtonContact";
-import SvgAnimated from "@/components/svgAnimated/SvgAnimated";
+import { ButtonContact } from "@/components/atoms/buttonContact/ButtonContact";
+import SvgAnimated from "@/components/atoms/svgAnimated/SvgAnimated";
 import { motion } from "motion/react";
 
 const cx = classNames.bind(styles);
