@@ -2,8 +2,6 @@
 
 import React, { useState } from "react";
 import styles from "./Nav.module.scss";
-// import { LocaleSwitcher } from "../LocaleSwitcher/LocaleSwitcher";
-// import { ThemeToggle } from "../ThemeToggle/ThemeToggle";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import classNames from "classnames/bind";

@@ -33,5 +33,11 @@
   },
   "Contact": {
     "desc": "Contactez moi par mail ou via mon linkedin"
+  },
+  "Links": {
+    "portfolio": "Portfolio",
+    "myshelf": "App de suivi de lecture",
+    "collection": "Mon recueil de poèmes",
+    "description": "Développeur Fullstack, voici mon univers mélânt dev, écritures et philosophie"
   }
 }
